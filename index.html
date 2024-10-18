@@ -1,44 +1,131 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <title>Wikipédia DIO</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-    <div>   
-        <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
-        </div>
-    </div>
-
-    <div class="bar"></div>
-
-    <div class="content">
-        <div class="sidebar">
-            <h2>Título</h2>
-            <ul>
-                <li><a href="#">Links</a></li>
-            </ul>
-        </div>
-
-        <div class="main">
+    <header class="container-header">
+        
+            <picture class="logo">
+                <source srcset="assets/images/logo-desafio.png" media="min-width: 200px">
+                <img src="assets/images/logo-desafio.png" alt="Logo Wikipédia DIO">
+            </picture>
             
+        
+        <div class="form-search-site">
+                <form action="/search" method="get" id="form-busca">
+                    <label for="busca">
+                        <img src="./assets/images/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="Lupa" class="lupa-icon">
+                    </label>
+                    <input type="text" name="query" placeholder="Pesquise em todo o site" id="busca">
+                    <button type="submit" value="Pesquisar" id="botao-pesquisa">Pesquisar</button>
+                </form>
+                
         </div>
+    </header>
 
-        <div class="anchors">
-            <h2>Neste Artigo</h2>
-            <ul>
-                <li><a href="#">Âncoras</a></li>
-            </ul>
-        </div>
+    <div class="bar">
+        <button id="toggle-btn">Modo Escuro</button>
     </div>
 
-    <div class="footer">
+    <main id="descricao-main" class="content">
+        
+            <nav class="sidebar">
+                <h2>Conteúdo</h2>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#primeiros-programadores">Primeiros Programadores</a></li>
+                    <li><a href="#cargos-de-ti">Cargos de TI</a></li>
+                    <li><a href="#tipos-de-programador">Tipos de programador</a></li>
+                    <li><a href="#referencia">Referência</a></li>
+                </ul>
+            </nav>
+            
+                <section class="main">
+                    <h1 id="inicio">Programador</h1>
+                        <div class="container-programador">
+                            <p>
+                                Em ciência da <b>computação, programador, desenvolvedor, codificador ou engenheiro de software</b> é alguém que escreve, desenvolve ou faz a manutenção de software em um grande sistema ou alguém que desenvolve software para uso em computadores pessoais.
+                            </p>
+                            <figure>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Programmer_writing_code_with_Unit_Tests.jpg/1200px-Programmer_writing_code_with_Unit_Tests.jpg" alt="imagem de programador escrevendo código" width="220" eight="147">
+                                <figcaption>Programador escrevendo código em java</figcaption>
+                            </figure>
+                        </div>
+                    <h1 id="primeiros-programadores">Primeiros Programadores</h1>
+                        <p>
+                            <a href="https://www.ebiografia.com/ada_lovelace/" title="biografia Ada Lovelace">Ada Lovelace</a> é historicamente considerada a primeira programadora. Ela foi a primeira a desenvolver um algoritmo para implantação em um computador, a máquina de análise de Charles Babbage, em outubro de 1842.
+                        </p>
+                        <p>
+                            Os que possuem excelentes habilidades em programação de computadores podem se tornar famosos, apesar de isto ser normalmente limitado aos círculos da <q>engenharia de software</q>. Muitos dos mais notáveis programadores são chamados algumas vezes de <a href="https://www.dicio.com.br/hacker/" title="dicionário online sobre hackers">"hackers"</a>.
+                        </p>
+                        <p>
+                            Programadores profissionais trabalham em vários ambientes, incluindo departamentos de TI corporativos, grandes empresas de software e pequenas empresas de serviços. Muitos programadores profissionais também trabalham para empresas de consultoria nas instalações dos clientes.
+                        </p>
+                        <details>
+                            Engenharia de software é uma área interdisciplinar de conhecimento, que agrega ciências exatas e humanas, e.g., engenharia e administração. A área rege o processo produtivo de sistemas baseados em rotinas computacionais, chamado processo de software, que por sua vez inclui especificação, desenvolvimento, manutenção e criação de software. Tais atividades podem ser realizadas com a aplicação de tecnologias e práticas de gerência de projetos e outras disciplinas, visando organização, produtividade e qualidade. Atualmente, essas tecnologias e práticas englobam linguagens de programação, banco de dados, ferramentas, plataformas, bibliotecas, padrões de projeto de software, processo de software e qualidade de software.
+                            <summary>
+                                Saiba mais - Engenharia de software.
+                            </summary>
+                        </details>
+                    <h1 id="cargos-de-ti">Cargos de TI</h1>
+                    <div class="container-primeria-programadora">
+                        <p>
+                            Na área de tecnologia da informação não existem apenas os programadores, mas diversos outros cargos encarregados de gerenciar, analisar e criar toda a estrutura do software sem mesmo escrever uma linha de código.
+                        </p>
+                        <figure>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Ada_Lovelace.jpg/800px-Ada_Lovelace.jpg" alt="imagem da primeira programadora Ada Lovelace" width="180" eight="286">
+                            <figcaption>Ada Lovelace 1ª programadora</figcaption>
+                        </figure>
+                    </div>
+                        <ul>
+                            <li class="lista"><strong>Gerente de projetos:</strong> não aplicável apenas na área de TI, responsável por integrar toda a equipe de engenheiros, analistas, DBA e programadores. Gerencia prazo, custo e escopo do projeto.</li><br>
+                            <li class="lista"><strong>Arquiteto de software:</strong> arquiteto de software é a pessoa responsável por criar toda a estrutura do software a ser desenvolvido, bem como o que o software deve fazer, como deve responder, como se comunicar com outros softwares e usuário. Ele é comparado a um engenheiro civil que não levanta paredes, mas realiza todos os cálculos e planejamento da estrutura de um prédio.</li><br>
+                            <li class="lista"><strong>Analista de sistemas:</strong> responsável pela comunicação com o usuário, ver os requisitos necessários do software, analisar problemas e melhores soluções. Geralmente ele já trabalhou algum tempo como programador e tem um conhecimento na área, mas muitas vezes trabalha só com documentação do software.</li><br>
+                            <li class="lista"><strong>Analista de testes:</strong> responsável pela qualidade do software, possui conhecimento que tem como função criar testes nos sistemas e gerar roteiros de automação de testes, fazendo a análise de erros.</li><br>
+                            <li class="lista"><strong>Analista de segurança:</strong> responsável por averiguar problemas em softwares e sistemas operacionais utilizados numa rede / empresa, treinado para proteger de ataques e muitas vezes tem vasto conhecimento em como realizar os mesmos.</li><br>
+                            <li class="lista"><strong>Programador:</strong> responsável pela implementação e correção de erros/defeitos no sistema. Seu foco é desenvolver novas soluções e pôr em prática todas as necessidades impostas pelo analista de sistemas.</li><br>
+                            <li class="lista"><strong>Administrador de banco de dados</strong> <i>(ABD ou DBA, sigla em inglês)</i>: o administrador do banco de dados, onde são guardadas as informações, ele não programa, mas é responsável por gerenciar como são guardadas as informações, meios de otimização de buscas, segurança dos dados e permissão de acesso.</li><br>
+                        </ul>
+                    <h1 id="tipos-de-programador">Tipos de programador</h1>
+                        <ul>
+                            <li class="lista"><strong>Programador Web:</strong> É o programador especialista em criar sites que são considerados páginas dinâmicas, como portais e fóruns. Linguagens geralmente utilizadas: HTML <i>(incluindo JavaScript e CSS)</i>, Java, PHP, .NET (ASP, C# e VB), Ruby, Python e Perl.</li><br>
+                            <li class="lista"><strong>Programador Desktop:</strong> É o programador que desenvolve aplicativos para rodar localmente nas máquinas. Linguagens geralmente utilizadas: C, C++, C# e Java.</li><br>
+                            <li class="lista"><strong>Programador Mobile:</strong> é o programador especialista na criação de aplicativos para celulares, tablets e demais dispositivos móveis. As linguagens mais usadas são <b>Java, Kotlin e Swift.</b></li><br>
+                            <li class="lista"><strong>Programador de Jogos:</strong> trabalha com a programação de jogos eletrônicos, podendo desenvolver para diversas plataformas, como: Smartphones, PCs e consoles(as) e dispondo de muitas opções de linguagens de programação, sendo C#, C++ e Java as mais populares atualmente.</li><br>
+                            <li class="lista"><strong>Programador de Sistemas Embarcados:</strong> desenvolve software para sistemas computacionais especializados, em tempo real e/ou de alto risco, como os encontrados em aviões, carros, caixas eletrônicos e hospitais. Também pode desenvolver para IoT. Como esses sistemas geralmente são limitados em recursos (memória, processamento etc.), as linguagens comumente usadas nessa área são C, C++, Rust e, em certos casos, Java, Python e Assembly.</li><br>
+                            <li class="lista"><strong>Programador executivo:</strong> é o programador que coordena o processo de aplicação do código em um projeto, independente da linguagem ou metodologia de trabalho escolhida pelos analistas e GPs (gerentes de projetos). O seu trabalho pode ser comparado ao de um executivo comum: incorpora a pessoa jurídica, visa somente lucros e requer o máximo de sua equipe de programação. Exemplos: <a href="https://www.ebiografia.com/bill_gates/" title="biografia de bill gates">Bill Gates</a>, <a href="https://www.suno.com.br/tudo-sobre/steve-wozniak/" title="biografia de Steve Wozniak">Steve Wozniak</a>, <a href="" title="biografia de Mark Zuckerberg">Mark Zuckerberg</a>, <a href="https://www.suno.com.br/tudo-sobre/steve-wozniak/" title="biografia de Gabe Newell">Gabe Newell</a>, entre outros.</li><br>
+                            <li class="lista"><strong>Programador sonoro:</strong> é a pessoa encarregada de manipular faixas de áudio a fim de montá-las, mixá-las e melhorá-las.</li><br>
+                        </ul>
+                        <h1 id="referencia">Referência</h1>
+                        <ol>
+                            <li><a href="https://www.dicio.com.br/programador/" title="definição de programador dicionário online">Definição de programador</a> Dicio. Consultado em 29 de Abril de 2016</li>
+                            <li>Fuegi, J.; Francis, J. (2003). Lovelace & Babbage and the creation of the 1843 'notes'. Annals of the History of Computing. 25. [S.l.: s.n.] pp. 18–26 <a href="https://www.doi.org/" title="Digital object identifier">doi: </a><a href="https://ieeexplore.ieee.org/document/1253887" title="referencia Ada Lovelace ">10.1109/MAHC.2003.1253887</a></li>
+                            <li><a href="https://www.tecmundo.com.br/2862-profissao-programador-web.htm" title="site profissão programador web"></a>Tecmundo. Consultado em 29 de Abril de 2016</li>
+                        </ol>
+                </section>
+                <article class="anchors">
+                    <h2>Artigos DIO</h2>
+                    <ul>
+                        <li><a href="https://www.dio.me/articles/transicao-de-carreira-para-a-area-de-analise-e-desenvolvimento-de-sistemas" target="_blank">Análise Desenvolvimento de Sistemas</a></li>
+                        <li><a href="https://www.dio.me/articles/ciencia-de-dados-x-computacao-de-dados" target="_blank">Ciência da computação</a></li>
+                        <li><a href="https://www.dio.me/articles/direto-ao-ponto-6-os-antecessores-do-computador" target="_blank">Antecesor do Computador</a></li>
+                        <li><a href="https://www.dio.me/articles/ciberseguranca-conhecendo-o-ethical-hacking" target="_blank">Cibersegurança: Conhecendo o Ethical Hacking</a></li>
+                        <li><a href="https://www.dio.me/articles/tecnologia-e-programacao" target="_blank">Tecnologia e Programação</a></li>
+                    </ul>
+                </article>
+                
+            
+        
+    </main>
 
-    </div>
+    <footer class="footer">
+            <p>Desenvolvido por Sérgio Sousa - Desafio Trilha HTML5 - Módulo 3 DIO</p>
+    </footer>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
